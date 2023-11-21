@@ -1,12 +1,12 @@
-export const accounting_documents = [
+export const accounting_documents = (period, contractId) => [
   {
-    year: 2023,
+    year: period,
     month: 11,
     agentDocuments: {
       acts: [
         {
           id: Math.random(),
-          number: 'КБ-123456',
+          number: `КБ-123456-${contractId}`,
         },
         {
           id: Math.random(),
@@ -54,7 +54,7 @@ export const accounting_documents = [
     },
   },
   {
-    year: 2023,
+    year: period,
     month: 10,
     agentDocuments: {
       acts: [
@@ -83,7 +83,7 @@ export const accounting_documents = [
     },
   },
   {
-    year: 2023,
+    year: period,
     month: 9,
     agentDocuments: {
       acts: [
@@ -131,7 +131,7 @@ export const accounting_documents = [
   },
 
   {
-    year: 2023,
+    year: period,
     month: 8,
     agentDocuments: {
       acts: [
@@ -185,7 +185,7 @@ export const accounting_documents = [
     },
   },
   {
-    year: 2023,
+    year: period,
     month: 7,
     agentDocuments: {
       acts: [
@@ -214,7 +214,7 @@ export const accounting_documents = [
     },
   },
   {
-    year: 2023,
+    year: period,
     month: 6,
     agentDocuments: {
       acts: [
@@ -262,7 +262,7 @@ export const accounting_documents = [
   },
 
   {
-    year: 2023,
+    year: period,
     month: 5,
     agentDocuments: {
       acts: [
@@ -316,7 +316,7 @@ export const accounting_documents = [
     },
   },
   {
-    year: 2023,
+    year: period,
     month: 4,
     agentDocuments: {
       acts: [
@@ -345,7 +345,7 @@ export const accounting_documents = [
     },
   },
   {
-    year: 2023,
+    year: period,
     month: 3,
     agentDocuments: {
       acts: [
@@ -393,7 +393,7 @@ export const accounting_documents = [
   },
 
   {
-    year: 2023,
+    year: period,
     month: 2,
     agentDocuments: {
       acts: [
@@ -447,7 +447,7 @@ export const accounting_documents = [
     },
   },
   {
-    year: 2023,
+    year: period,
     month: 1,
     agentDocuments: {
       acts: [

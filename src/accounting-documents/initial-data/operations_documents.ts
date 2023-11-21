@@ -1,27 +1,24 @@
-const generateDailyRegisters = () => {
+const generateDailyRegisters = (contractId) => {
   const arr = [];
   for (let i = 1; i < 32; i++) {
     arr.push({
       id: Math.random(),
       dayNumber: i,
-      number: `000${i}`,
+      number: `000${i}-${contractId}`,
     });
   }
   return arr;
 };
 
-const generateOperationsDocuments = () => {
+export const generateOperationsDocuments = (period, contractId) => {
   const arr = [];
   for (let i = 11; i > 0; i--) {
     arr.push({
-      year: 2023,
+      year: period,
       month: i,
       operationsReportId: Math.random(),
-      dailyRegisters: generateDailyRegisters(),
+      dailyRegisters: generateDailyRegisters(contractId),
     });
   }
   return arr;
 };
-
-export const operations_documents = generateOperationsDocuments();
-// export const operations_documents = [];

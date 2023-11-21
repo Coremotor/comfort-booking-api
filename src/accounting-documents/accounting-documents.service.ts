@@ -1,35 +1,38 @@
 import { Injectable, StreamableFile } from '@nestjs/common';
 
 import { accounting_documents } from './initial-data/accounting-documents';
-import { operations_documents } from './initial-data/operations_documents';
+import { generateOperationsDocuments } from './initial-data/operations_documents';
 import { createReadStream } from 'fs';
 import { join } from 'path';
 
 @Injectable()
 export class AccountingDocumentsService {
-  private readonly accounting_documents = accounting_documents;
-  private readonly operations_documents = operations_documents;
-
-  findAccountingDocuments() {
-    return this.accounting_documents;
+  findAccountingDocuments(query) {
+    const { contractId, period } = query;
+    console.log(contractId, period);
+    return accounting_documents(period, contractId);
   }
 
-  findOperationsDocuments() {
-    return this.operations_documents;
+  findOperationsDocuments(query) {
+    const { contractId, period } = query;
+    console.log(contractId, period);
+    return generateOperationsDocuments(period, contractId);
   }
 
   getStreamableFileZip(): StreamableFile {
-    const file = createReadStream(join(process.cwd(), 'test-zip.zip'));
+    const file = createReadStream(join(process.cwd(), 'files/test-zip.zip'));
     return new StreamableFile(file);
   }
 
   getStreamableFilePdf(): StreamableFile {
-    const file = createReadStream(join(process.cwd(), 'pdf-test.pdf'));
+    const file = createReadStream(join(process.cwd(), 'files/pdf-test.pdf'));
     return new StreamableFile(file);
   }
 
   getStreamableFileXls(): StreamableFile {
-    const file = createReadStream(join(process.cwd(), 'tests-example.xls'));
+    const file = createReadStream(
+      join(process.cwd(), 'files/tests-example.xls'),
+    );
     return new StreamableFile(file);
   }
 }

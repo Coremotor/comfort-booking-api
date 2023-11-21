@@ -9,23 +9,17 @@ export class AccountingDocumentsController {
 
   @Get('/accounting-documents')
   findAccountingDocuments(@Query() query) {
-    console.log(query);
-    return this.accountingDocumentsService.findAccountingDocuments();
+    return this.accountingDocumentsService.findAccountingDocuments(query);
   }
 
   @Get('/operations-documents')
   findOperationsDocuments(@Query() query) {
-    console.log(query);
-    return this.accountingDocumentsService.findOperationsDocuments();
+    return this.accountingDocumentsService.findOperationsDocuments(query);
   }
 
   @Get('/download-in-archive')
-  // @Header(
-  //   'Access-Control-Expose-Headers',
-  //   'Content-Disposition, Content-Type, Location',
-  // )
   @Header('Content-Type', 'application/zip')
-  // @Header('Content-Disposition', 'attachment; filename="archive.zip"')
+  @Header('Content-Disposition', 'attachment; filename="archive.zip"')
   getZipFile(@Query() query) {
     console.log(query);
     return this.accountingDocumentsService.getStreamableFileZip();
