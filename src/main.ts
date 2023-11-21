@@ -14,7 +14,7 @@ async function bootstrap() {
     httpsOptions,
   });
   app.enableCors({
-    allowedHeaders: '*',
+    allowedHeaders: ['https://admin.for-test-apps.ru'],
     credentials: true,
     origin: '*',
   });
