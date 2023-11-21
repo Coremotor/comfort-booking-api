@@ -24,7 +24,7 @@ async function bootstrap() {
     exposedHeaders: ['Content-Disposition'],
     credentials: true,
     methods: 'GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE',
-    origin: '*',
+    origin: ['https://admin.for-test-apps.ru', '*'],
     maxAge: 60 * 60 * 24 * 365,
     preflightContinue: false,
   });
