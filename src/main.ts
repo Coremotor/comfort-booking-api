@@ -14,8 +14,7 @@ async function bootstrap() {
     httpsOptions,
   });
   app.enableCors({
-    allowedHeaders: ['https://admin.for-test-apps.ru'],
-    credentials: true,
+    allowedHeaders: '*',
     origin: '*',
   });
   app.use(json({ limit: '50mb' }));
