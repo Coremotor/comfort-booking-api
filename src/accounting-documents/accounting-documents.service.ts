@@ -1,28 +1,35 @@
-import { Injectable } from '@nestjs/common';
-import { CreateAccountingDocumentDto } from './dto/create-accounting-document.dto';
-import { UpdateAccountingDocumentDto } from './dto/update-accounting-document.dto';
+import { Injectable, StreamableFile } from '@nestjs/common';
+
 import { accounting_documents } from './initial-data/accounting-documents';
+import { operations_documents } from './initial-data/operations_documents';
+import { createReadStream } from 'fs';
+import { join } from 'path';
 
 @Injectable()
 export class AccountingDocumentsService {
   private readonly accounting_documents = accounting_documents;
-  create(createAccountingDocumentDto: CreateAccountingDocumentDto) {
-    return 'This action adds a new accountingDocument';
-  }
+  private readonly operations_documents = operations_documents;
 
-  findAll() {
+  findAccountingDocuments() {
     return this.accounting_documents;
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} accountingDocument`;
+  findOperationsDocuments() {
+    return this.operations_documents;
   }
 
-  update(id: number, updateAccountingDocumentDto: UpdateAccountingDocumentDto) {
-    return `This action updates a #${id} accountingDocument`;
+  getStreamableFileZip(): StreamableFile {
+    const file = createReadStream(join(process.cwd(), 'test-zip.zip'));
+    return new StreamableFile(file);
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} accountingDocument`;
+  getStreamableFilePdf(): StreamableFile {
+    const file = createReadStream(join(process.cwd(), 'pdf-test.pdf'));
+    return new StreamableFile(file);
+  }
+
+  getStreamableFileXls(): StreamableFile {
+    const file = createReadStream(join(process.cwd(), 'tests-example.xls'));
+    return new StreamableFile(file);
   }
 }

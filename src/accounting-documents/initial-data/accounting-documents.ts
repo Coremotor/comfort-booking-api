@@ -1,119 +1,478 @@
 export const accounting_documents = [
   {
-    id: 1,
-    period: 'Октябрь 2023',
-    cb_docs: [
-      {
-        id: 1,
-        name: 'Акт КБ-123456',
-        url: 'http://localhost:5173/files/pdf-test.pdf',
-      }, //pdf
-      { id: 2, name: 'Акт КБ-12', url: 'https://www.orimi.com/pdf-test.pdf' }, //pdf
-      {
-        id: 3,
-        name: 'Отчет агента',
-        url: 'http://localhost:5173/files/pdf-test.pdf',
-      }, //pdf
-      {
-        id: 4,
-        name: 'Отчет агента',
-        url: 'http://localhost:5173/files/pdf-test.pdf',
-      }, //pdf
-      {
-        id: 5,
-        name: 'Счет-фактура 123-345',
-        url: 'http://localhost:5173/files/pdf-test.pdf',
-      }, //pdf
-      {
-        id: 6,
-        name: 'Корректировочный акт',
-        url: 'http://localhost:5173/files/pdf-test.pdf',
-      }, //pdf
-      {
-        id: 7,
-        name: 'Корректировочная счет-фактура',
-        url: 'http://localhost:5173/files/pdf-test.pdf',
-      }, //pdf
-    ],
-    ps_docs: [
-      {
-        id: 1,
-        name: 'Акт платежной системы',
-        url: 'http://localhost:5173/files/pdf-test.pdf',
-      }, //pdf
-      {
-        id: 2,
-        name: 'Реестр платежной системы',
-        url: 'http://localhost:5173/files/tests-example.xls',
-      }, //xls
-    ],
-    all_docs_download_link: 'http://localhost:3000/files', //zip
+    year: 2023,
+    month: 11,
+    agentDocuments: {
+      acts: [
+        {
+          id: Math.random(),
+          number: 'КБ-123456',
+        },
+        {
+          id: Math.random(),
+          number: 'КБ-12',
+        },
+      ],
+      agentReports: [
+        {
+          id: Math.random(),
+        },
+        {
+          id: Math.random(),
+        },
+      ],
+      proformaInvoices: [
+        {
+          id: Math.random(),
+          number: '123-345',
+        },
+      ],
+      correctionActs: [
+        {
+          id: Math.random(),
+          number: '673-23',
+        },
+      ],
+      correctionProformaInvoices: [
+        {
+          id: Math.random(),
+          number: '9028931-aas',
+        },
+      ],
+    },
+    paymentSystemDocuments: {
+      paymentSystemActs: [
+        {
+          id: Math.random(),
+        },
+      ],
+      paymentSystemOperationReports: [
+        {
+          id: Math.random(),
+        },
+      ],
+    },
   },
   {
-    id: 2,
-    period: 'Сентябрь 2023',
-    cb_docs: [
-      {
-        id: 1,
-        name: 'Акт КБ-123456',
-        url: 'http://localhost:5173/files/pdf-test.pdf',
-      }, //pdf
-      {
-        id: 2,
-        name: 'Отчет агента',
-        url: 'http://localhost:5173/files/pdf-test.pdf',
-      }, //pdf
-      {
-        id: 3,
-        name: 'Счет-фактура 123-345',
-        url: 'http://localhost:5173/files/pdf-test.pdf',
-      }, //pdf
-    ],
-    ps_docs: [],
-    all_docs_download_link: 'http://localhost:3000/files', //zip
+    year: 2023,
+    month: 10,
+    agentDocuments: {
+      acts: [
+        {
+          id: Math.random(),
+          number: 'КБ-123456',
+        },
+      ],
+      agentReports: [
+        {
+          id: Math.random(),
+        },
+      ],
+      proformaInvoices: [
+        {
+          id: Math.random(),
+          number: '123-345',
+        },
+      ],
+      correctionActs: [],
+      correctionProformaInvoices: [],
+    },
+    paymentSystemDocuments: {
+      paymentSystemActs: [],
+      paymentSystemOperationReports: [],
+    },
   },
   {
-    id: 3,
-    period: 'Август 2023',
-    cb_docs: [
-      {
-        id: 1,
-        name: 'Акт КБ-123456',
-        url: 'http://localhost:5173/files/pdf-test.pdf',
-      }, //pdf
-      {
-        id: 2,
-        name: 'Отчет агента',
-        url: 'http://localhost:5173/files/pdf-test.pdf',
-      }, //pdf
-      {
-        id: 3,
-        name: 'Счет-фактура 123-345',
-        url: 'http://localhost:5173/files/pdf-test.pdf',
-      }, //pdf
-      {
-        id: 4,
-        name: 'Корректировочный акт',
-        url: 'http://localhost:5173/files/pdf-test.pdf',
-      }, //pdf
-      {
-        id: 5,
-        name: 'Корректировочная счет-фактура',
-        url: 'http://localhost:5173/files/pdf-test.pdf',
-      }, //pdf
-    ],
-    ps_docs: [
-      {
-        id: 1,
-        name: 'Акт платежной системы',
-        url: 'http://localhost:5173/files/pdf-test.pdf',
-      }, //pdf
-      {
-        id: 2,
-        name: 'Реестр платежной системы',
-        url: 'http://localhost:5173/files/tests-example.xls',
-      }, //xls
-    ],
-    all_docs_download_link: 'http://localhost:3000/files', //zip
+    year: 2023,
+    month: 9,
+    agentDocuments: {
+      acts: [
+        {
+          id: Math.random(),
+          number: 'КБ-1234656',
+        },
+      ],
+      agentReports: [
+        {
+          id: Math.random(),
+        },
+      ],
+      proformaInvoices: [
+        {
+          id: Math.random(),
+          number: '123-385',
+        },
+      ],
+      correctionActs: [
+        {
+          id: Math.random(),
+          number: '0-23',
+        },
+      ],
+      correctionProformaInvoices: [
+        {
+          id: Math.random(),
+          number: '9028931-546',
+        },
+      ],
+    },
+    paymentSystemDocuments: {
+      paymentSystemActs: [
+        {
+          id: Math.random(),
+        },
+      ],
+      paymentSystemOperationReports: [
+        {
+          id: Math.random(),
+        },
+      ],
+    },
+  },
+
+  {
+    year: 2023,
+    month: 8,
+    agentDocuments: {
+      acts: [
+        {
+          id: Math.random(),
+          number: 'КБ-123456',
+        },
+        {
+          id: Math.random(),
+          number: 'КБ-12',
+        },
+      ],
+      agentReports: [
+        {
+          id: Math.random(),
+        },
+        {
+          id: Math.random(),
+        },
+      ],
+      proformaInvoices: [
+        {
+          id: Math.random(),
+          number: '123-345',
+        },
+      ],
+      correctionActs: [
+        {
+          id: Math.random(),
+          number: '673-23',
+        },
+      ],
+      correctionProformaInvoices: [
+        {
+          id: Math.random(),
+          number: '9028931-aas',
+        },
+      ],
+    },
+    paymentSystemDocuments: {
+      paymentSystemActs: [
+        {
+          id: Math.random(),
+        },
+      ],
+      paymentSystemOperationReports: [
+        {
+          id: Math.random(),
+        },
+      ],
+    },
+  },
+  {
+    year: 2023,
+    month: 7,
+    agentDocuments: {
+      acts: [
+        {
+          id: Math.random(),
+          number: 'КБ-123456',
+        },
+      ],
+      agentReports: [
+        {
+          id: Math.random(),
+        },
+      ],
+      proformaInvoices: [
+        {
+          id: Math.random(),
+          number: '123-345',
+        },
+      ],
+      correctionActs: [],
+      correctionProformaInvoices: [],
+    },
+    paymentSystemDocuments: {
+      paymentSystemActs: [],
+      paymentSystemOperationReports: [],
+    },
+  },
+  {
+    year: 2023,
+    month: 6,
+    agentDocuments: {
+      acts: [
+        {
+          id: Math.random(),
+          number: 'КБ-1234656',
+        },
+      ],
+      agentReports: [
+        {
+          id: Math.random(),
+        },
+      ],
+      proformaInvoices: [
+        {
+          id: Math.random(),
+          number: '123-385',
+        },
+      ],
+      correctionActs: [
+        {
+          id: Math.random(),
+          number: '0-23',
+        },
+      ],
+      correctionProformaInvoices: [
+        {
+          id: Math.random(),
+          number: '9028931-546',
+        },
+      ],
+    },
+    paymentSystemDocuments: {
+      paymentSystemActs: [
+        {
+          id: Math.random(),
+        },
+      ],
+      paymentSystemOperationReports: [
+        {
+          id: Math.random(),
+        },
+      ],
+    },
+  },
+
+  {
+    year: 2023,
+    month: 5,
+    agentDocuments: {
+      acts: [
+        {
+          id: Math.random(),
+          number: 'КБ-123456',
+        },
+        {
+          id: Math.random(),
+          number: 'КБ-12',
+        },
+      ],
+      agentReports: [
+        {
+          id: Math.random(),
+        },
+        {
+          id: Math.random(),
+        },
+      ],
+      proformaInvoices: [
+        {
+          id: Math.random(),
+          number: '123-345',
+        },
+      ],
+      correctionActs: [
+        {
+          id: Math.random(),
+          number: '673-23',
+        },
+      ],
+      correctionProformaInvoices: [
+        {
+          id: Math.random(),
+          number: '9028931-aas',
+        },
+      ],
+    },
+    paymentSystemDocuments: {
+      paymentSystemActs: [
+        {
+          id: Math.random(),
+        },
+      ],
+      paymentSystemOperationReports: [
+        {
+          id: Math.random(),
+        },
+      ],
+    },
+  },
+  {
+    year: 2023,
+    month: 4,
+    agentDocuments: {
+      acts: [
+        {
+          id: Math.random(),
+          number: 'КБ-123456',
+        },
+      ],
+      agentReports: [
+        {
+          id: Math.random(),
+        },
+      ],
+      proformaInvoices: [
+        {
+          id: Math.random(),
+          number: '123-345',
+        },
+      ],
+      correctionActs: [],
+      correctionProformaInvoices: [],
+    },
+    paymentSystemDocuments: {
+      paymentSystemActs: [],
+      paymentSystemOperationReports: [],
+    },
+  },
+  {
+    year: 2023,
+    month: 3,
+    agentDocuments: {
+      acts: [
+        {
+          id: Math.random(),
+          number: 'КБ-1234656',
+        },
+      ],
+      agentReports: [
+        {
+          id: Math.random(),
+        },
+      ],
+      proformaInvoices: [
+        {
+          id: Math.random(),
+          number: '123-385',
+        },
+      ],
+      correctionActs: [
+        {
+          id: Math.random(),
+          number: '0-23',
+        },
+      ],
+      correctionProformaInvoices: [
+        {
+          id: Math.random(),
+          number: '9028931-546',
+        },
+      ],
+    },
+    paymentSystemDocuments: {
+      paymentSystemActs: [
+        {
+          id: Math.random(),
+        },
+      ],
+      paymentSystemOperationReports: [
+        {
+          id: Math.random(),
+        },
+      ],
+    },
+  },
+
+  {
+    year: 2023,
+    month: 2,
+    agentDocuments: {
+      acts: [
+        {
+          id: Math.random(),
+          number: 'КБ-123456',
+        },
+        {
+          id: Math.random(),
+          number: 'КБ-12',
+        },
+      ],
+      agentReports: [
+        {
+          id: Math.random(),
+        },
+        {
+          id: Math.random(),
+        },
+      ],
+      proformaInvoices: [
+        {
+          id: Math.random(),
+          number: '123-345',
+        },
+      ],
+      correctionActs: [
+        {
+          id: Math.random(),
+          number: '673-23',
+        },
+      ],
+      correctionProformaInvoices: [
+        {
+          id: Math.random(),
+          number: '9028931-aas',
+        },
+      ],
+    },
+    paymentSystemDocuments: {
+      paymentSystemActs: [
+        {
+          id: Math.random(),
+        },
+      ],
+      paymentSystemOperationReports: [
+        {
+          id: Math.random(),
+        },
+      ],
+    },
+  },
+  {
+    year: 2023,
+    month: 1,
+    agentDocuments: {
+      acts: [
+        {
+          id: Math.random(),
+          number: 'КБ-123456',
+        },
+      ],
+      agentReports: [
+        {
+          id: Math.random(),
+        },
+      ],
+      proformaInvoices: [
+        {
+          id: Math.random(),
+          number: '123-345',
+        },
+      ],
+      correctionActs: [],
+      correctionProformaInvoices: [],
+    },
+    paymentSystemDocuments: {
+      paymentSystemActs: [],
+      paymentSystemOperationReports: [],
+    },
   },
 ];
