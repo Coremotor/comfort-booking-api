@@ -3,5 +3,8 @@ export enum ContractStatusEnum {
   Terminated,
   AcceptWaiting,
   AcceptDeclined,
+  ContractDataConfirmWaiting,
+  ContractDataConfirmed,
   Stay,
+  Suspended,
 }
