@@ -7,4 +7,5 @@ export enum ContractStatusEnum {
   ContractDataConfirmed,
   Stay,
   Suspended,
+  TariffAcceptWaiting,
 }

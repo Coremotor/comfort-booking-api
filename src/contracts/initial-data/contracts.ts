@@ -23,6 +23,13 @@ export const contracts = [
     type: 'paper',
   },
   {
+    contractId: 3.1,
+    contractNumber: 'ТРКБ-23233 от 33.1.08.2019',
+    contractStatus: ContractStatusEnum.AcceptWaiting,
+    years: [2022, 2021, 2020, 2019],
+    type: 'offer',
+  },
+  {
     contractId: 4,
     contractNumber: 'ТРКБ-23044 от 44.11.2022',
     contractStatus: ContractStatusEnum.AcceptDeclined,
@@ -53,13 +60,20 @@ export const contracts = [
   {
     contractId: 8,
     contractNumber: 'ТРКБ-23088 от 88.01.2023',
-    contractStatus: ContractStatusEnum.ContractDataConfirmed,
+    contractStatus: ContractStatusEnum.TariffAcceptWaiting,
     years: [2023],
     type: 'paper',
-    // tariffs: [
-    //
-    // ]
   },
+  // {
+  //   contractId: 8,
+  //   contractNumber: 'ТРКБ-23088 от 88.01.2023',
+  //   contractStatus: ContractStatusEnum.ContractDataConfirmed,
+  //   years: [2023],
+  //   type: 'paper',
+  // tariffs: [
+  //
+  // ]
+  // },
 
   // {
   //   contractId: 11,
