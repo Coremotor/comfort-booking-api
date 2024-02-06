@@ -23,5 +23,5 @@ export type TContract = {
   contractStatus: ContractStatusEnum;
   years: number[];
   type: 'paper' | 'offer';
-  contractConditions: { id: number, status: ContractConditionStatusEnum }[];
+  contractConditions: { id: number; status: ContractConditionStatusEnum }[];
 };

@@ -1,6 +1,5 @@
 import { Injectable } from '@nestjs/common';
 import { contracts } from './initial-data/contracts';
-import e from 'express';
 import { ContractConditionStatusEnum, ContractStatusEnum } from './types/enums';
 
 @Injectable()

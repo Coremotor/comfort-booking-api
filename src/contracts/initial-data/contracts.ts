@@ -19,7 +19,9 @@ export const contracts: TContract[] = [
     contractStatus: ContractStatusEnum.ContractDataConfirmWaiting,
     years: [2023, 2022, 2021],
     type: 'paper',
-    contractConditions: [{ id: 1, status: ContractConditionStatusEnum.AcceptWaiting }],
+    contractConditions: [
+      { id: 1, status: ContractConditionStatusEnum.AcceptWaiting },
+    ],
   },
   {
     contractId: 3,
@@ -27,7 +29,9 @@ export const contracts: TContract[] = [
     contractStatus: ContractStatusEnum.Suspended,
     years: [2022, 2021, 2020, 2019],
     type: 'paper',
-    contractConditions: [{ id: 1, status: ContractConditionStatusEnum.Expired }],
+    contractConditions: [
+      { id: 1, status: ContractConditionStatusEnum.Expired },
+    ],
   },
   {
     contractId: 4,
@@ -35,7 +39,9 @@ export const contracts: TContract[] = [
     contractStatus: ContractStatusEnum.Stay,
     years: [2023],
     type: 'paper',
-    contractConditions: [{ id: 1, status: ContractConditionStatusEnum.AcceptWaiting }],
+    contractConditions: [
+      { id: 1, status: ContractConditionStatusEnum.AcceptWaiting },
+    ],
   },
   {
     contractId: 41,
