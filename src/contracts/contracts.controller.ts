@@ -11,8 +11,13 @@ export class ContractsController {
   }
 
   @Post()
-  editStatus(@Body() body) {
-    return this.contractsService.editStatus(body);
+  editContractStatus(@Body() body) {
+    return this.contractsService.editContractStatus(body);
+  }
+
+  @Post('/conditions')
+  editConditionsStatus(@Body() body) {
+    return this.contractsService.editConditionsStatus(body);
   }
 
   @Post('/reset')
