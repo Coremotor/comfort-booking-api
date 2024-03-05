@@ -1,20 +1,20 @@
 export enum ContractStatusEnum {
-  AcceptWaiting, // Ожидает акцепта
-  ContractDataConfirmWaiting, // Ожидает подтверждения данных
-  Stay, // Принят
-  Active, // Активен
-  AcceptDeclined, // Акцепт договора отклонен
-  Suspended, // Договор приостановлен
-  Terminated, // Договор расторгнут
+  AcceptDeclined = 'AcceptDeclined', // Акцепт договора отклонен
+  AcceptWaiting = 'AcceptWaiting', // Ожидает акцепта
+  Active = 'Active', // Активен
+  ContractDataConfirmWaiting = 'ContractDataConfirmWaiting', // Ожидает подтверждения данных
+  Stay = 'Stay', // Принят
+  Suspended = 'Suspended', // Договор приостановлен
+  Terminated = 'Terminated', // Договор расторгнут
 }
 
 export enum ContractConditionStatusEnum {
-  AcceptWaiting, // Ожидают акцепта
-  Active, // Активны
-  ClientDeclined, // Отклонены клиентом
-  AcceptingExpired, // Истек срок принятия условий
-  BeginWaiting, // Ожидают начала действия
-  Expired, // Завершен срок действия
+  AcceptingExpired = 'AcceptingExpired', // Истек срок принятия условий
+  AcceptWaiting = 'AcceptWaiting', // Ожидают акцепта
+  Active = 'Active', // Активны
+  BeginWaiting = 'BeginWaiting', // Ожидают начала действия
+  ClientDeclined = 'ClientDeclined', // Отклонены клиентом
+  Expired = 'Expired', // Завершен срок действия
 }
 
 export type TContract = {
@@ -23,5 +23,16 @@ export type TContract = {
   contractStatus: ContractStatusEnum;
   years: number[];
   type: 'paper' | 'offer';
-  contractConditions: { id: number; status: ContractConditionStatusEnum }[];
+  contractConditions: TCondition[];
+};
+
+export type TCondition = {
+  acceptDate: string;
+  startDate: string;
+  endDate: string;
+  id: number;
+  name: string;
+  provider: { id: string; name: string }[];
+  specialConditions: string;
+  status: ContractConditionStatusEnum;
 };
